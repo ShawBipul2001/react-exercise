@@ -1,0 +1,202 @@
+[
+    {
+        "name": "John Doe",
+        "designation": "Software Engineer",
+        "email": "john.doe@example.com",
+        "roles": [
+            "Viewer"
+        ]
+    },
+    {
+        "name": "Jane Smith",
+        "designation": "Project Manager",
+        "email": "jane.smith@example.com",
+        "roles": [
+            "Manager"
+        ]
+    },
+    {
+        "name": "Alice Johnson",
+        "designation": "Designer",
+        "email": "alice.johnson@example.com",
+        "roles": [
+            "Contributor"
+        ]
+    },
+    {
+        "name": "Bob Brown",
+        "designation": "QA Engineer",
+        "email": "bob.brown@example.com",
+        "roles": [
+            "Editor"
+        ]
+    },
+    {
+        "name": "Charlie Davis",
+        "designation": "Product Owner",
+        "email": "charlie.davis@example.com",
+        "roles": [
+            "Admin"
+        ]
+    },
+    {
+        "name": "Daniel Wilson",
+        "designation": "Business Analyst",
+        "email": "daniel.wilson@example.com",
+        "roles": [
+            "Viewer"
+        ]
+    },
+    {
+        "name": "Emily Clark",
+        "designation": "Marketing Specialist",
+        "email": "emily.clark@example.com",
+        "roles": [
+            "Editor"
+        ]
+    },
+    {
+        "name": "Frank Harris",
+        "designation": "DevOps Engineer",
+        "email": "frank.harris@example.com",
+        "roles": [
+            "Manager"
+        ]
+    },
+    {
+        "name": "Grace Lewis",
+        "designation": "Scrum Master",
+        "email": "grace.lewis@example.com",
+        "roles": [
+            "Admin"
+        ]
+    },
+    {
+        "name": "Hannah Martin",
+        "designation": "Content Writer",
+        "email": "hannah.martin@example.com",
+        "roles": [
+            "Contributor"
+        ]
+    },
+    {
+        "name": "Ian White",
+        "designation": "Support Engineer",
+        "email": "ian.white@example.com",
+        "roles": [
+            "Viewer"
+        ]
+    },
+    {
+        "name": "Jack Thompson",
+        "designation": "HR Manager",
+        "email": "jack.thompson@example.com",
+        "roles": [
+            "Manager"
+        ]
+    },
+    {
+        "name": "Karen Scott",
+        "designation": "Accountant",
+        "email": "karen.scott@example.com",
+        "roles": [
+            "Editor"
+        ]
+    },
+    {
+        "name": "Larry Moore",
+        "designation": "Sales Manager",
+        "email": "larry.moore@example.com",
+        "roles": [
+            "Admin"
+        ]
+    },
+    {
+        "name": "Mia King",
+        "designation": "Data Analyst",
+        "email": "mia.king@example.com",
+        "roles": [
+            "Contributor"
+        ]
+    },
+    {
+        "name": "Nathan Baker",
+        "designation": "System Administrator",
+        "email": "nathan.baker@example.com",
+        "roles": [
+            "Viewer"
+        ]
+    },
+    {
+        "name": "Olivia Hall",
+        "designation": "UX Researcher",
+        "email": "olivia.hall@example.com",
+        "roles": [
+            "Editor"
+        ]
+    },
+    {
+        "name": "Paul Young",
+        "designation": "Financial Analyst",
+        "email": "paul.young@example.com",
+        "roles": [
+            "Manager"
+        ]
+    },
+    {
+        "name": "Quincy Allen",
+        "designation": "Legal Advisor",
+        "email": "quincy.allen@example.com",
+        "roles": [
+            "Admin"
+        ]
+    },
+    {
+        "name": "Rachel Wright",
+        "designation": "Operations Manager",
+        "email": "rachel.wright@example.com",
+        "roles": [
+            "Contributor"
+        ]
+    },
+    {
+        "name": "Steve Hill",
+        "designation": "Security Specialist",
+        "email": "steve.hill@example.com",
+        "roles": [
+            "Viewer"
+        ]
+    },
+    {
+        "name": "Tina Green",
+        "designation": "Research Scientist",
+        "email": "tina.green@example.com",
+        "roles": [
+            "Editor"
+        ]
+    },
+    {
+        "name": "Ursula Adams",
+        "designation": "Logistics Coordinator",
+        "email": "ursula.adams@example.com",
+        "roles": [
+            "Manager"
+        ]
+    },
+    {
+        "name": "Victor Nelson",
+        "designation": "IT Support",
+        "email": "victor.nelson@example.com",
+        "roles": [
+            "Admin"
+        ]
+    },
+    {
+        "name": "Wendy Perez",
+        "designation": "Procurement Officer",
+        "email": "wendy.perez@example.com",
+        "roles": [
+            "Contributor"
+        ]
+    }
+]
