@@ -47,6 +47,7 @@ const UserTable = () => {
         localStorage.setItem('UsersList', JSON.stringify(updatedUsers));
         setEditingUser(null);
     };
+    
 
     const handleCancelEdit = () => {
         setEditingUser(null);
