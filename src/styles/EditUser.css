@@ -1,0 +1,8 @@
+.editUser{
+    /* position:fixed; */
+    /* z-index: 1;; */
+    width: 100px;
+    height:100 px;
+    background-color: black;
+    border: 1px solid #ccc;
+}

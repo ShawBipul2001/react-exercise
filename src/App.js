@@ -15,6 +15,7 @@ function App() {
   };
   const [users, setUsers] = useState(usersData);
   const [newUser, setNewUser] = useState(defaultNewUser);
+  // const [editing, setEditings] = useState(defaultEditing);
   const handleAddUserSubmit = (e)=>{
     e.preventDefault();
     // console.log(newUser);
@@ -25,6 +26,9 @@ function App() {
     const idx = parseInt(e.currentTarget.id,10);
     const newUsersList = users.filter((user,index) => (index!==idx));
     setUsers(newUsersList);
+  }
+  const handleEdit = (e) =>{
+    console.log(e.currentTarget.id);
   }
   return (
     <>
@@ -37,6 +41,7 @@ function App() {
       <TableComponent
         users = {users}
         handleDelete={handleDelete}
+        handleEdit={handleEdit}
       />
       {/* Create more components here */}
     </>

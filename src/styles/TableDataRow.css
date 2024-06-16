@@ -1,5 +1,15 @@
-td{
-    padding:2px;
+.table-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cell{
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+    flex: 1 0 0;
+    box-sizing: border-box; 
+    /* border: 1px solid #ccc; */
 }
 .button {
     display: inline-block;
@@ -12,11 +22,34 @@ td{
     border-radius: 4px;
   }
   
-  .button:hover {
+.edit:hover{
+    background-color: #00ff00;
+}
+.delete:hover {
     background-color: #ff0000;
-  }
-  
-  .button:active {
+} 
+
+.button:active {
     transform: translateY(1px);
-  }
+}
+
+
+.one{
+    width: 20%;
+}
+.two{
+    width: 20%;
+}
+.three{
+    width: 25%;
+}
+.four{
+    width: 15%;
+}
+.five{
+    width: 10%;
+}
+.six{
+    width: 10%;
+}
   

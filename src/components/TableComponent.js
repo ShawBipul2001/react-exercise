@@ -4,26 +4,27 @@ import TableDataRow from './TableDataRow';
 
 import '../styles/TableComponent.css';
 
-const TableComponent = ({users, handleDelete}) => {
+const TableComponent = ({users, handleDelete, handleEdit}) => {
 
     const data = users;
     // console.log(users);
 
     return (
     <div className='table-container'>
-        <table className='container' >
-            <TableColumnNames/>
-            <tbody>
-                {data.map((item,index) => (
-                    <TableDataRow
-                    key = {index}
-                    item={item}
-                    index = {index}
-                    handleDelete={handleDelete}
-                    />
-                ))}
-            </tbody>
-        </table>
+        <div className='container'>
+        <TableColumnNames/>
+        <div className='data-rows-container'>
+            {data.map((user,index) => (
+                <TableDataRow
+                key = {index}
+                user={user}
+                index = {index}
+                handleDelete={handleDelete}
+                handleEdit={handleEdit}
+                />
+            ))}
+        </div>
+        </div>
     </div>
     );
   };

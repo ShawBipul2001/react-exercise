@@ -1,17 +1,16 @@
 import React from 'react'
+import '../styles/TableColumnNames.css'
 
 const TableColumnNames = () => {
   return (
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Designation</th>
-            <th>Email</th>
-            <th>Role</th>
-            <th>Edit</th>
-            <th>Delete </th>
-        </tr>
-    </thead>
+    <div className='table-head-row'>
+      <div className='cell one'>Name</div>
+      <div className='cell two'>Designation</div>
+      <div className='cell three'>Email</div>
+      <div className='cell four'>Role</div>
+      <div className='cell five'>Edit</div>
+      <div className='cell six'>Delete </div>
+    </div>
   )
 }
 
