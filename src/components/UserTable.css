@@ -1,0 +1,38 @@
+body.light {
+    background-color: white;
+    color: black;
+    th, td {
+      border: 1px solid #010803;
+      
+    }
+  }
+  
+  body.dark {
+    background-color: black;
+    color: rgb(235, 233, 233);
+    th, td {
+      border: 1px solid #e8efea;
+      
+    }
+  }
+  
+  button {
+    margin-bottom: 10px;
+    
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #09c509;
+    text-align: left;
+  }
+  
