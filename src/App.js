@@ -21,6 +21,11 @@ function App() {
     // console.log(users[0]);
     setUsers([...users,newUser]);
   }
+  const handleDelete = (e) =>{
+    const idx = parseInt(e.currentTarget.id,10);
+    const newUsersList = users.filter((user,index) => (index!==idx));
+    setUsers(newUsersList);
+  }
   return (
     <>
       <Header />
@@ -31,6 +36,7 @@ function App() {
       />
       <TableComponent
         users = {users}
+        handleDelete={handleDelete}
       />
       {/* Create more components here */}
     </>

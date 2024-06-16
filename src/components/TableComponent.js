@@ -4,7 +4,7 @@ import TableDataRow from './TableDataRow';
 
 import '../styles/TableComponent.css';
 
-const TableComponent = ({users}) => {
+const TableComponent = ({users, handleDelete}) => {
 
     const data = users;
     // console.log(users);
@@ -18,6 +18,8 @@ const TableComponent = ({users}) => {
                     <TableDataRow
                     key = {index}
                     item={item}
+                    index = {index}
+                    handleDelete={handleDelete}
                     />
                 ))}
             </tbody>

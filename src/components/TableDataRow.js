@@ -1,7 +1,9 @@
 import React from 'react'
 import { FaTrashAlt } from 'react-icons/fa'
 import { MdEdit } from 'react-icons/md'
-const TableDataRow = ({item}) => {
+
+import '../styles/TableDataRow.css'
+const TableDataRow = ({item,index, handleDelete}) => {
   return (
     <tr>
       <td>{item.name}</td>
@@ -9,10 +11,16 @@ const TableDataRow = ({item}) => {
       <td>{item.email}</td>
       <td>{item.roles}</td>
       <td>
-        <MdEdit size ={20}/>
+        <MdEdit size ={18}/>
       </td> 
-      <td className='delete-btn'> 
-        <FaTrashAlt size={20}/>         
+      <td>
+        <button 
+          className='delete button'
+          id = {index}
+          onClick={(e) => handleDelete(e)}
+        > 
+          <FaTrashAlt size = {18}/>
+        </button>         
       </td>
     </tr>
   )
