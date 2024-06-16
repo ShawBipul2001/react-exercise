@@ -9,8 +9,10 @@ const TableDataRow = ({item}) => {
       <td>{item.email}</td>
       <td>{item.roles}</td>
       <td>
-        <MdEdit/> 
-        <FaTrashAlt/>         
+        <MdEdit size ={20}/>
+      </td> 
+      <td className='delete-btn'> 
+        <FaTrashAlt size={20}/>         
       </td>
     </tr>
   )

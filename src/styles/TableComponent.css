@@ -14,16 +14,16 @@
 .container {
     text-align: left;
     overflow: hidden;
-    width: 90%;
+    width: 96%;
     margin: 0 auto;
     display: table;
     padding: 0 0 8em 0;
 }
   
 .container td, .container th {
-    padding-bottom: 2%;
-    padding-top: 2%;
-    padding-left:2%;  
+    padding-bottom: 1%;
+    padding-top: 1%;
+    padding-left:1%;  
 }
 
 /* Background-color of the odd rows */
@@ -38,13 +38,6 @@
 
 .container th {
     background-color: #5AB2FF;
-}
-
-.container td:last-child { 
-    display: flex;
-    justify-content: space-evenly; 
-    align-items: center; 
-    padding-top: 1rem;
 }
 
 

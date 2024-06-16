@@ -3,10 +3,12 @@ import TableColumnNames from './TableColumnNames';
 import TableDataRow from './TableDataRow';
 
 import '../styles/TableComponent.css';
+
 const TableComponent = ({users}) => {
 
-    const data = users
-  
+    const data = users;
+    // console.log(users);
+
     return (
     <div className='table-container'>
         <table className='container' >

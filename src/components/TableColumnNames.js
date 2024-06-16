@@ -8,7 +8,8 @@ const TableColumnNames = () => {
             <th>Designation</th>
             <th>Email</th>
             <th>Role</th>
-            <th>Edit / Delete </th>
+            <th>Edit</th>
+            <th>Delete </th>
         </tr>
     </thead>
   )
