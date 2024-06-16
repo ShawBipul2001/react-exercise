@@ -1,28 +1,28 @@
-.table-container {
+.container {
     width: 100%;
-  }
+}
   
-.table-container th {
+.container th {
     padding: 10px;
     text-align: center;
     border: 1.5px solid black;
 }
 
-.table-container td {
+.container td {
     padding: 10px;
     text-align: center;
     align-items: center;
     border: 1px solid #ddd;
 }
   
-.table-container svg {
+.container svg {
     width: 30px;
     height: 30px;
     color: #3f51b5;
     cursor: pointer;
 }
 
-.Save {
+.save {
     background-color: #3f51b5;
     color: white;
     border-radius: 5px;
@@ -32,7 +32,7 @@
     cursor: pointer;
 }
 
-.Cancel {
+.cancel {
     background-color: rgb(177, 29, 29);
     color: white;
     border: 1px solid white;
@@ -42,6 +42,15 @@
     cursor: pointer;
 }
 
-.Input {
-    padding: 2%;
+.input {
+    padding: 10px; 
+    border: 2px solid black;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; 
+}
+
+/* Optional: Hover and Focus styles */
+.input:hover,
+.input:focus {
+    border-color: #007bff; 
 }

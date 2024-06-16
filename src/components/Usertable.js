@@ -9,6 +9,7 @@ const UserTable = () => {
     const [editedName, setEditedName] = useState('');
     const [editedDesignation, setEditedDesignation] = useState('');
     const [editedEmail, setEditedEmail] = useState('');
+    const [editedRoles, setEditedRoles] = useState([]);
 
     useEffect(() => {
         setUsers(usersData);
@@ -25,6 +26,7 @@ const UserTable = () => {
         setEditedName(user.name);
         setEditedDesignation(user.designation);
         setEditedEmail(user.email);
+        setEditedRoles([...user.roles]);
     };
 
     const handleSave = () => {
@@ -35,6 +37,7 @@ const UserTable = () => {
                     name: editedName,
                     designation: editedDesignation,
                     email: editedEmail,
+                    roles: editedRoles,
                 };
             }
             return user;
@@ -50,11 +53,20 @@ const UserTable = () => {
         setEditedName('');
         setEditedDesignation('');
         setEditedEmail('');
+        setEditedRoles([]);
     };
+
+    const handleRoleChange = (index, role) => {
+        const updatedRoles = [...editedRoles];
+        updatedRoles[index] = role;
+        setEditedRoles(updatedRoles);
+    };
+
+    const roleOptions = ['Editor', 'Viewer', 'Contributor','Manager'];
 
     return (
         <div>
-            <table className='table-container'>
+            <table className='container'>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -71,7 +83,7 @@ const UserTable = () => {
                             <td>
                                 {editingUser === user ? (
                                     <input
-                                        className='Input'
+                                        className='input'
                                         type="text"
                                         value={editedName}
                                         onChange={(event) => setEditedName(event.target.value)}
@@ -83,7 +95,7 @@ const UserTable = () => {
                             <td>
                                 {editingUser === user ? (
                                     <input
-                                        className='Input'
+                                        className='input'
                                         type="text"
                                         value={editedDesignation}
                                         onChange={(event) => setEditedDesignation(event.target.value)}
@@ -95,7 +107,7 @@ const UserTable = () => {
                             <td>
                                 {editingUser === user ? (
                                     <input
-                                        className='Input'
+                                        className='input'
                                         type="email"
                                         value={editedEmail}
                                         onChange={(event) => setEditedEmail(event.target.value)}
@@ -104,12 +116,31 @@ const UserTable = () => {
                                     user.email
                                 )}
                             </td>
-                            <td>{user.roles.join(', ')}</td>
+                            <td>
+                                {editingUser === user ? (
+                                        <div>
+                                            {editedRoles.map((role, roleIndex) => (
+                                                <select
+                                                    className='input'
+                                                    key={roleIndex}
+                                                    value={role}
+                                                    onChange={(e) => handleRoleChange(roleIndex, e.target.value)}
+                                                >
+                                                    {roleOptions.map((option) => (
+                                                        <option key={option} value={option}>{option}</option>
+                                                    ))}
+                                                </select>
+                                            ))}
+                                        </div>
+                                    ) : (
+                                        user.roles.join(', ')
+                                )}
+                            </td>
                             <td>
                                 {editingUser === user ? (
                                     <>
-                                        <button className='Save' onClick={handleSave}>Save</button>
-                                        <button className='Cancel' onClick={handleCancelEdit}>Cancel</button>
+                                        <button className='save' onClick={handleSave}>Save</button>
+                                        <button className='cancel' onClick={handleCancelEdit}>Cancel</button>
                                     </>
                                 ) : (
                                     <FaPen 
