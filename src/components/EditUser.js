@@ -2,7 +2,16 @@ import React from 'react'
 
 import '../styles/EditUser.css'
 
-const EditUser = ({editUser, handleEditUserSubmit, handleEditUserChange}) => {
+const EditUser = ({editUser,setEditRowNo, handleEditUserSubmit, setEditUser}) => {
+    const handleEditUserChange = (e)=>{
+        if(e.target.id==='roles'){
+            setEditUser({...editUser, roles:[e.target.value]})
+        }
+        else{
+            const {id, value} = e.target;
+            setEditUser({...editUser, [id]:value});
+        }
+    }
     return (
         <form
             className='editUser'
@@ -56,6 +65,13 @@ const EditUser = ({editUser, handleEditUserSubmit, handleEditUserChange}) => {
                 aria-label='Save User'
             >
                Save User
+            </button>
+            <button 
+                type="button"
+                aria-label='Save User'
+                onClick={()=>{setEditRowNo(-1)}}
+            >
+               Cancel Edit
             </button>
         </form>
       )

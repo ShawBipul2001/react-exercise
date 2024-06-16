@@ -4,10 +4,22 @@ import { MdEdit } from "react-icons/md";
 
 import "../styles/TableDataRow.css";
 import EditUser from "./EditUser";
-const TableDataRow = ({ user, index, handleDelete, handleEdit }) => {
+const TableDataRow = ({
+  user,
+  index,
+  handleDelete,
+  handleEdit, 
+  editRowNo ,
+  setEditRowNo,
+  editingUser,
+  setEditingUser,
+  handleEditUserSubmit
+}) => {
   return (
     <>
-      <div className="table-row">
+    <div className="xyz-with-edit">
+      { editRowNo!==index ? 
+      (<div className="table-row">
         <div className="cell one">{user.name}</div>
         <div className="cell two">{user.designation}</div>
         <div className="cell three">{user.email}</div>
@@ -31,7 +43,17 @@ const TableDataRow = ({ user, index, handleDelete, handleEdit }) => {
           </button>
         </div>
       </div>
-      {/* <EditUser editUser={user} /> */}
+      ):
+      ( 
+      <EditUser 
+        editUser={editingUser}
+        editRowNo = {editRowNo} 
+        setEditRowNo={setEditRowNo}
+        handleEditUserSubmit={handleEditUserSubmit}
+        setEditUser={setEditingUser}
+      />
+      )}
+    </div>
     </>
   );
 };

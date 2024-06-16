@@ -15,12 +15,20 @@ function App() {
   };
   const [users, setUsers] = useState(usersData);
   const [newUser, setNewUser] = useState(defaultNewUser);
-  // const [editing, setEditings] = useState(defaultEditing);
+  const [editRowNo,setEditRowNo] = useState(-1);
+  const [editingUser,setEditingUser] = useState({});
+  const handleEditUserSubmit = (e)=>{
+    e.preventDefault();
+    const newUsersList = users.filter((user,index) =>(index!=editRowNo));
+    setUsers([...newUsersList,editingUser]);
+    setEditRowNo(-1);
+  }
   const handleAddUserSubmit = (e)=>{
     e.preventDefault();
     // console.log(newUser);
     // console.log(users[0]);
     setUsers([...users,newUser]);
+    setNewUser(defaultNewUser);
   }
   const handleDelete = (e) =>{
     const idx = parseInt(e.currentTarget.id,10);
@@ -28,7 +36,9 @@ function App() {
     setUsers(newUsersList);
   }
   const handleEdit = (e) =>{
-    console.log(e.currentTarget.id);
+    const idx = parseInt(e.currentTarget.id,10);
+    setEditingUser(users[idx]);
+    setEditRowNo(parseInt(e.currentTarget.id,10));
   }
   return (
     <>
@@ -42,6 +52,11 @@ function App() {
         users = {users}
         handleDelete={handleDelete}
         handleEdit={handleEdit}
+        editRowNo = {editRowNo}
+        setEditRowNo={setEditRowNo}
+        editingUser={editingUser}
+        setEditingUser={setEditingUser}
+        handleEditUserSubmit={handleEditUserSubmit}
       />
       {/* Create more components here */}
     </>

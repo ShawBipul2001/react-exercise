@@ -4,7 +4,14 @@ import TableDataRow from './TableDataRow';
 
 import '../styles/TableComponent.css';
 
-const TableComponent = ({users, handleDelete, handleEdit}) => {
+const TableComponent = ({users,
+     handleDelete,
+      handleEdit,
+       editRowNo,
+       setEditRowNo,
+       editingUser,
+       setEditingUser,
+       handleEditUserSubmit}) => {
 
     const data = users;
     // console.log(users);
@@ -21,6 +28,11 @@ const TableComponent = ({users, handleDelete, handleEdit}) => {
                 index = {index}
                 handleDelete={handleDelete}
                 handleEdit={handleEdit}
+                editRowNo = {editRowNo}
+                setEditRowNo={setEditRowNo}
+                editingUser={editingUser}
+                setEditingUser={setEditingUser}
+                handleEditUserSubmit={handleEditUserSubmit}
                 />
             ))}
         </div>

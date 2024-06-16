@@ -10,10 +10,10 @@
     display: flex;
     flex-direction: column;
 }
-.data-rows-container .table-row:nth-child(even) {
+.data-rows-container .xyz-with-edit:nth-child(even) {
     background-color: #FFF9EF;
 }
-.data-rows-container .table-row:nth-child(odd) {
+.data-rows-container .xyz-with-edit:nth-child(odd) {
     background-color: #FFF9D0;
 }
 
