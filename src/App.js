@@ -1,3 +1,4 @@
+import UserTable from './components/Usertable';
 import Header from './components/header';
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
     <>
       <Header />
       {/* Create more components here */}
+      <UserTable/>
     </>
   );
 }
