@@ -19,7 +19,7 @@ function App() {
   const [editingUser,setEditingUser] = useState({});
   const handleEditUserSubmit = (e)=>{
     e.preventDefault();
-    const newUsersList = users.filter((user,index) =>(index!=editRowNo));
+    const newUsersList = users.filter((user,index) =>(index!==editRowNo));
     setUsers([...newUsersList,editingUser]);
     setEditRowNo(-1);
   }
