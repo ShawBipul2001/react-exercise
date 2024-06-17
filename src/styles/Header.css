@@ -1,28 +1,40 @@
+/* Header.css */
+
 .app-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3f51b5;
     padding: 10px 20px;
+    background-color: #3f51b5;
     color: white;
-}
-
-.app-title {
+  }
+  
+  .app.light .app-header {
+    background-color: #3f51b5;
+  }
+  
+  .app.dark .app-header {
+    background-color: #222;
+  }
+  
+  .app-title {
     margin: 0;
     font-size: 1.5rem;
-}
-
-.theme-toggle {
+  }
+  
+  .theme-toggle {
     display: flex;
     align-items: center;
-}
-
-.theme-toggle label {
+  }
+  
+  .theme-toggle label {
     margin-left: 10px;
     font-size: 1rem;
     cursor: pointer;
-}
-
-.theme-toggle input[type="radio"] {
+  }
+  
+  .theme-toggle input[type="radio"] {
     margin-right: 5px;
-}
+    cursor: pointer;
+  }
+  
