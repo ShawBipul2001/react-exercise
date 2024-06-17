@@ -1,12 +1,33 @@
+/* Header.css */
+
+.root {
+    /* Define global styles here */
+    font-family: Arial, sans-serif;
+}
+
+.root.light {
+    /* Light mode global styles */
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.root.dark {
+    /* Dark mode global styles */
+    background-color: #333;
+    color: #f0f0f0;
+}
+
 .app-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3f51b5;
     padding: 10px 20px;
-    color: white;
+    font-size: 1.5rem;
 }
 
+.app-header .app-title {
+    margin: 0;
+}
 
 .app-header.light {
     background-color: #3f51b5; /* Light mode background color */
@@ -16,11 +37,6 @@
 .app-header.dark {
     background-color: #333; /* Dark mode background color */
     color: #f0f0f0; /* Dark mode text color */
-}
-
-.app-title {
-    margin: 0;
-    font-size: 1.5rem;
 }
 
 .theme-toggle {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import userData from '../data/users.json';
+import '../styles/UserTable.css';
 
 const UserTable = () => {
   const [users, setUsers] = useState(userData);

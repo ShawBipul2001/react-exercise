@@ -1,0 +1,43 @@
+/* src/styles/style.css */
+ 
+/* Light mode styles */
+table {
+    width:100%;
+    border-collapse:collapse;
+}
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+ 
+body.light-mode table {
+  background-color: white;
+  color: black;
+}
+ 
+body.light-mode th, 
+body.light-mode td {
+  border: 1px solid black;
+}
+ 
+/* Dark mode styles */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+ 
+body.dark-mode table {
+  background-color: black;
+  color: white;
+}
+ 
+body.dark-mode th, 
+body.dark-mode td {
+  border: 1px solid white;
+}
+ 
+button {
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
