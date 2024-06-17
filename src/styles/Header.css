@@ -7,6 +7,17 @@
     color: white;
 }
 
+
+.app-header.light {
+    background-color: #3f51b5; /* Light mode background color */
+    color: white; /* Light mode text color */
+}
+
+.app-header.dark {
+    background-color: #333; /* Dark mode background color */
+    color: #f0f0f0; /* Dark mode text color */
+}
+
 .app-title {
     margin: 0;
     font-size: 1.5rem;

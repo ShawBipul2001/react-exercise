@@ -1,12 +1,16 @@
-import Header from './components/header';
+import React from 'react';
+import Header from './components/header'; // Assuming header.js exists
+import UserTable from './components/UserTable'; // Importing UserTable component
 
-function App() {
+const App = () => {
   return (
     <>
       <Header />
-      {/* Create more components here */}
+      <div className="App">
+        <UserTable />
+      </div>
     </>
   );
-}
+};
 
 export default App;
