@@ -1,28 +1,25 @@
 .app-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #3f51b5;
-    padding: 10px 20px;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(13, 27, 154);
+  padding: 10px 20px;
+  color: white;
+}
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.dark {
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .app-title {
-    margin: 0;
-    font-size: 1.5rem;
+  margin: 0;
+  font-size: 1.5rem;
 }
-
-.theme-toggle {
-    display: flex;
-    align-items: center;
-}
-
 .theme-toggle label {
-    margin-left: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.theme-toggle input[type="radio"] {
-    margin-right: 5px;
+  margin-left: 1rem;
 }
