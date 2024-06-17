@@ -48,6 +48,10 @@ const Content = () => {
     const newUsers = users.filter((_, i) => i !== index);
     setUsers(newUsers);
   };
+
+  const handleCancel = () => {
+    setEditIndex(null);
+  };
   return (
     <div>
       <UsersTable
@@ -60,6 +64,7 @@ const Content = () => {
         handleEditClick={handleEditClick}
         handleRoleChange={handleRoleChange}
         handleSaveClick={handleSaveClick}
+        handleCancel={handleCancel}
       />
     </div>
   );

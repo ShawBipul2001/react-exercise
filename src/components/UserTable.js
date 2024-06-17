@@ -10,6 +10,7 @@ const UserTable = ({
   handleChange,
   handleRoleChange,
   handleDelete,
+  handleCancel,
 }) => {
   return (
     <table>
@@ -61,6 +62,7 @@ const UserTable = ({
                 </td>
                 <td>
                   <button onClick={handleSaveClick}>Save</button>
+                  <button onClick={handleCancel}>Cancel</button>
                 </td>
               </>
             ) : (
