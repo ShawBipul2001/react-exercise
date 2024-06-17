@@ -1,3 +1,17 @@
+:root {
+    --background-color-light: #ffffff;
+    --background-color-dark: #2c3e50;
+    --text-color-light: #000000;
+    --text-color-dark: #ecf0f1;
+    --header-background-color: #3f51b5;
+    --edit-button-color: #5468dc;
+    --edit-button-hover-color: #394aa5;
+    --edit-button-active-color: #2e3b88;
+    --delete-button-color: #5468dc;
+    --delete-button-hover-color: #d04848;
+    --delete-button-active-color: #d92424;
+}
+
 .users-table {
     width: 100%;
     border-collapse: collapse;
@@ -5,9 +19,11 @@
     font-size: 16px;
     text-align: left;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
+    color: var(--text-color-light); /* Default text color for light theme */
+    background-color: var(--background-color-light); /* Default background color for light theme */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .users-table thead {
@@ -15,9 +31,15 @@
     color: white;
 }
 
-.users-table th, .users-table td {
+.users-table th{
     padding: 12px 15px;
     border-bottom: 1px solid #ddd;
+    color: white;
+}
+.users-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    color: var(--text-color);
 }
 
 .users-table th {
@@ -26,11 +48,11 @@
 }
 
 .users-table tbody tr {
-    transition: backgroud-color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .users-table tbody tr:nth-of-type(even) {
-    background-color: #f9f9f9;
+    background-color: var(--background-color-light);
 }
 
 .users-table tbody tr:hover {
@@ -42,7 +64,7 @@
 }
 
 .users-table input[type="text"],
-.users-table imput[type="email"],
+.users-table input[type="email"],
 .users-table select {
     width: 100%;
     padding: 10px;
@@ -65,31 +87,45 @@
 }
 
 .users-table button.edit {
-    background-color: #5468dc;
+    background-color: var(--edit-button-color);
 }
 
 .users-table button.edit:hover {
-    background-color: #394aa5;
+    background-color: var(--edit-button-hover-color);
 }
 
-.users-table button:active {
-    background-color: #2e3b88;
+.users-table button.edit:active {
+    background-color: var(--edit-button-active-color);
 }
 
 .users-table button.delete {
-    background-color: #5468dc;
+    background-color: var(--delete-button-color);
 }
 
 .users-table button.delete:hover {
-    background-color: #d04848;
+    background-color: var(--delete-button-hover-color);
 }
 
 .users-table button.delete:active {
-    background-color: #d92424;
+    background-color: var(--delete-button-active-color);
 }
 
 .users-table td:last-child {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* Dark theme styles */
+[data-theme='dark'] .users-table {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+[data-theme='dark'] .users-table tbody tr:nth-of-type(even) {
+    background-color: var(--background-color-dark);
+}
+
+[data-theme='dark'] .users-table tbody tr:hover {
+    background-color: #37474f; /* Dark theme hover color */
 }

@@ -1,8 +1,38 @@
+:root {
+    --background-color-light: #ffffff;
+    --background-color-dark: #2c3e50;
+    --text-color-light: #000000;
+    --text-color-dark: #ecf0f1;
+    --header-background-color: #3f51b5;
+    --edit-button-color: #5468dc;
+    --edit-button-hover-color: #394aa5;
+    --edit-button-active-color: #2e3b88;
+    --delete-button-color: #5468dc;
+    --delete-button-hover-color: #d04848;
+    --delete-button-active-color: #d92424;
+}
+
+[data-theme='light'] {
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+}
+
+[data-theme='dark'] {
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
 .app-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3f51b5;
+    background-color: var(--header-background-color);
     padding: 10px 20px;
     color: white;
 }
@@ -23,6 +53,40 @@
     cursor: pointer;
 }
 
-.theme-toggle input[type="radio"] {
-    margin-right: 5px;
+.theme-toggle input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-toggle-label {
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    position: relative;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle-label:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+.theme-toggle input[type="checkbox"]:checked + .theme-toggle-label {
+    background-color: #3f51b5; /* Adjust color for dark theme */
+}
+
+.theme-toggle input[type="checkbox"]:checked + .theme-toggle-label:before {
+    transform: translateX(24px);
 }
