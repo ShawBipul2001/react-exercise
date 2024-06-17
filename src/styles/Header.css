@@ -1,8 +1,16 @@
+:root {
+    --primary-color: #3f51b5;
+}
+
+[data-theme="dark"] {
+    --primary-color: #b56e3f;
+}
+
 .app-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3f51b5;
+    background-color: var(--primary-color);
     padding: 10px 20px;
     color: white;
 }
