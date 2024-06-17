@@ -1,0 +1,142 @@
+/* Variables */
+:root {
+  --background-color: #ffffff; /* default light mode background color */
+  --text-color: #333333; /* default text color */
+  --primary-color: #007bff; /* primary color */
+  --primary-hover-color: #0056b3; /* primary hover color */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+  --background-color: #333333; /* dark mode background color */
+  --text-color: #ffffff; /* dark mode text color */
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Form inputs */
+input[type="text"],
+input[type="email"],
+select {
+  
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 2px solid #aee623;
+  border-radius: 4px;
+  font-size: 14px;
+  margin: 4px 0;
+  padding: 8px;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Buttons */
+button {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: rgb(254, 252, 252);
+  font-size: 14px;
+  margin-right: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover-color);
+}
+
+/* Button Icons */
+button svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  fill: currentColor;
+}
+
+/* Responsive table */
+@media (max-width: 600px) {
+  table {
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+}
+
+body.light {
+  background-color: white;
+  color: black;
+  th {
+    color: #e8efea;
+  }
+  td {
+    border: 1px solid #010803;
+  }
+}
+
+body.dark {
+  background-color: black;
+  color: rgb(235, 233, 233);
+  th,
+  td {
+    border: 1px solid #e8efea;
+  }
+}
+
+button {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+}
+
+th {
+  background-color: #4d5d05;
+  text-align: left;
+}
