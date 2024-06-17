@@ -78,7 +78,7 @@ const UserTable = () => {
                         <th>Delete</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className='body'>
                     {users.map((user, index) => (
                         <tr key={index}>
                             <td>
