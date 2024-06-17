@@ -21,10 +21,15 @@ const Content = () => {
   };
 
   const handleSaveClick = () => {
-    const newUsers = [...users];
-    newUsers[editIndex] = editedUser;
-    setUsers(newUsers);
-    setEditIndex(null);
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailPattern.test(editedUser.email)) {
+      const newUsers = [...users];
+      newUsers[editIndex] = editedUser;
+      setUsers(newUsers);
+      setEditIndex(null);
+    } else {
+      alert("Please enter a valid email address");
+    }
   };
 
   const handleChange = (e) => {
