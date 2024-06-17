@@ -1,7 +1,5 @@
-// Example usage in a parent component
 import { useState } from "react";
 import TableRow from "./TableRow";
-import { useEffect } from "react";
 import data from '../data/users.json';
 
 const Table = () => {
@@ -9,8 +7,8 @@ const Table = () => {
     const [rows, setRows] = useState(data)
 
     const handleSave = (updatedData) => {
-        console.log("Saving data:", updatedData);
-
+        rows.push(updatedData)
+        setRows(rows)
     };
 
     const handleDeleteClick = (email) => {
