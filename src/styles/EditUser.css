@@ -1,0 +1,42 @@
+.editUser label{
+    position: absolute;
+    left :-9999px;
+}
+.editUser{
+    display:inline-block;
+    display: flex;
+    flex-direction: row; 
+    padding: 10px;  
+}
+
+.editUser input{
+    margin-top:2px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.editUser input:focus {
+    outline: none; /* Remove the default focus outline */
+}
+.editUser select{
+    margin-top:2px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+.editUser select:focus {
+    outline: none; /* Remove the default focus outline */
+}
+.editUser button{
+    margin-top:2px;
+    margin-left:1%;
+    margin-right:1%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100px;
+}

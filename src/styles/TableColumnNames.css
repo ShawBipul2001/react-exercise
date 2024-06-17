@@ -1,0 +1,36 @@
+.table-head-row{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: left;
+}
+.one{
+    width: 20%;
+}
+.two{
+    width: 20%;
+}
+.three{
+    width: 25%;
+}
+.four{
+    width: 15%;
+}
+.five{
+    width: 10%;
+}
+.six{
+    width: 10%;
+}
+.lighth{
+    background-color: #5AB2FF;
+    color: #1b3642;
+}
+.darkh{
+    background-color: #000000;
+    color: #71d4ff;
+}
