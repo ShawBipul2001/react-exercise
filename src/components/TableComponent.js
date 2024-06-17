@@ -4,25 +4,30 @@ import TableDataRow from './TableDataRow';
 
 import '../styles/TableComponent.css';
 
-const TableComponent = ({users,
-     handleDelete,
-      handleEdit,
-       editRowNo,
-       setEditRowNo,
-       editingUser,
-       setEditingUser,
-       handleEditUserSubmit}) => {
+const TableComponent = ({
+    mode,
+    users,
+    handleDelete,
+    handleEdit,
+    editRowNo,
+    setEditRowNo,
+    editingUser,
+    setEditingUser,
+    handleEditUserSubmit}) => {
 
     const data = users;
     // console.log(users);
 
     return (
-    <div className='table-container'>
+    <div className={mode==='dark'? 'table-container darkt':'table-container lightt'}>
         <div className='container'>
-        <TableColumnNames/>
+        <TableColumnNames
+            mode={mode}
+        />
         <div className='data-rows-container'>
             {data.map((user,index) => (
                 <TableDataRow
+                mode={mode}
                 key = {index}
                 user={user}
                 index = {index}

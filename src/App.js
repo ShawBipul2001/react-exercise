@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 
 import AddUser from './components/AddUser';
 import Header from './components/header';
@@ -13,10 +13,18 @@ function App() {
     email:'',
     roles:['']
   };
+  const [mode, setMode] = useState('light');
   const [users, setUsers] = useState(usersData);
   const [newUser, setNewUser] = useState(defaultNewUser);
   const [editRowNo,setEditRowNo] = useState(-1);
   const [editingUser,setEditingUser] = useState({});
+  useEffect(() => {
+    const storedMode = localStorage.getItem('mode');
+    if (storedMode) {
+      setMode(storedMode);
+    }
+  }, []);
+
   const handleEditUserSubmit = (e)=>{
     e.preventDefault();
     const newUsersList = users.filter((user,index) =>(index!==editRowNo));
@@ -42,13 +50,13 @@ function App() {
   }
   return (
     <>
-      <Header />
-      <AddUser
-        newUser ={newUser}
-        setNewUser ={setNewUser}
-        handleAddUserSubmit = {handleAddUserSubmit}
+      <Header
+        mode = {mode}
+        setMode ={setMode}
       />
+      
       <TableComponent
+        mode = {mode}
         users = {users}
         handleDelete={handleDelete}
         handleEdit={handleEdit}
@@ -57,6 +65,13 @@ function App() {
         editingUser={editingUser}
         setEditingUser={setEditingUser}
         handleEditUserSubmit={handleEditUserSubmit}
+      />
+      <AddUser
+        // className ={mode==='dark'? 'darkb':'lightb'}
+        mode = {mode}
+        newUser ={newUser}
+        setNewUser ={setNewUser}
+        handleAddUserSubmit = {handleAddUserSubmit}
       />
       {/* Create more components here */}
     </>

@@ -17,8 +17,6 @@ const EditUser = ({editUser,setEditRowNo, handleEditUserSubmit, setEditUser}) =>
             className='editUser'
             onSubmit={handleEditUserSubmit}
         >
-        <tr>
-        <td>
             <label htmlFor='name'>Name</label>
             <input
                 id='name'
@@ -28,8 +26,6 @@ const EditUser = ({editUser,setEditRowNo, handleEditUserSubmit, setEditUser}) =>
                 onChange={(e)=>handleEditUserChange(e)}
                 required
             />
-        </td>
-        </tr>
             <label htmlFor='designation'>Designation</label>
             <input
                 id='designation'

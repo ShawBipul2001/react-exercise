@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/AddUser.css'
-const AddUser = ({newUser, setNewUser,handleAddUserSubmit}) => {
+const AddUser = ({mode,newUser, setNewUser,handleAddUserSubmit}) => {
    
     const handleAddUserChange = (e)=> {
         if(e.target.id==='roles'){
@@ -14,7 +14,7 @@ const AddUser = ({newUser, setNewUser,handleAddUserSubmit}) => {
     
   return (
     <form
-        className='addUser'
+        className={mode==='dark'? 'addUser  dark': 'addUser'}
         onSubmit={handleAddUserSubmit}
     >
         <label htmlFor='name'>Name</label>

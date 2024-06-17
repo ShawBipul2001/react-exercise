@@ -1,9 +1,9 @@
 import React from 'react'
 import '../styles/TableColumnNames.css'
 
-const TableColumnNames = () => {
+const TableColumnNames = ({mode}) => {
   return (
-    <div className='table-head-row'>
+    <div className =  {`table-head-row ${mode==='dark'? 'darkh':'lighth'}`}>
       <div className='cell one'>Name</div>
       <div className='cell two'>Designation</div>
       <div className='cell three'>Email</div>

@@ -16,11 +16,18 @@
     padding: 5px 10px;
     cursor: pointer;
     width:90%;
-    border: 2px solid;
-    background-color: #f0f0f0;
-    color: #333;
+    
+    
     border-radius: 4px;
   }
+.lightbtn{
+    background-color: #f0f0f0;
+    border: 2px solid;
+}
+.darkbtn{
+    background-color: #ffabe2;
+    border:none;
+}
   
 .edit:hover{
     background-color: #00ff00;

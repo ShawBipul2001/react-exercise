@@ -5,6 +5,7 @@ import { MdEdit } from "react-icons/md";
 import "../styles/TableDataRow.css";
 import EditUser from "./EditUser";
 const TableDataRow = ({
+  mode,
   user,
   index,
   handleDelete,
@@ -26,7 +27,7 @@ const TableDataRow = ({
         <div className="cell four">{user.roles}</div>
         <div className="cell five">
           <button
-            className="edit button"
+            className={`edit button ${mode==='dark'?'darkbtn':'lightbtn'}`}
             id={index}
             onClick={(e) => handleEdit(e)}
           >
@@ -35,7 +36,7 @@ const TableDataRow = ({
         </div>
         <div className="cell six">
           <button
-            className="delete button"
+            className={`delete button ${mode==='dark'?'darkbtn':'lightbtn'}`}
             id={index}
             onClick={(e) => handleDelete(e)}
           >

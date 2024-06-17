@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3f51b5;
     padding: 10px 20px;
     color: white;
 }
@@ -25,4 +24,11 @@
 
 .theme-toggle input[type="radio"] {
     margin-right: 5px;
+}
+
+.dark{
+    background-color: #061153 ;
+}
+.light{
+    background-color: #3f51b5;
 }

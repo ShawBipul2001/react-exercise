@@ -5,7 +5,8 @@
 .editUser{
     display:inline-block;
     display: flex;
-    flex-direction: row;   
+    flex-direction: row; 
+    padding: 10px;  
 }
 
 .editUser input{
