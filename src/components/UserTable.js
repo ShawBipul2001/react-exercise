@@ -1,6 +1,6 @@
 import RoleChange from './RoleChange';
 
-const UserTable = ({ users, roles, editedUser, editIndex, setEditedUser, handleEditClick, handleSaveClick, handleChange, handleRoleChange, handleDelete }) => {
+const UserTable = ({ users, roles, editedUser, editIndex, handleEditClick, handleSaveClick, handleChange, handleRoleChange, handleDelete }) => {
   return (
     <table>
         <thead>
@@ -58,13 +58,13 @@ const UserTable = ({ users, roles, editedUser, editIndex, setEditedUser, handleE
                             <td>{user.name}</td>
                             <td>{user.designation}</td>
                             <td>{user.email}</td>
-                            <td>
-                                <RoleChange
+                            <td>{user.roles}
+                                {/* <RoleChange
                                     user={user}
                                     roles={roles}
                                     handleRoleChange={handleRoleChange}
                                     index={index}
-                                />
+                                /> */}
                             </td>
                             <td>
                                 <button onClick={() => handleEditClick(index)}>Edit</button>

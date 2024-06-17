@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import UserTable from './UserTable';
 import usersData from '../data/users.json';
-import '../styles/styles.css'
+import '../styles/styles.css';
 
 const Content = () => {
     const roles = ["Editor", "Viewer", "Contributor", "Manager"];
@@ -40,13 +40,12 @@ const Content = () => {
     };
 
     return (
-        <div>
+        <div className="main-content">
             <UserTable
                 users={users}
                 roles={roles}
                 editIndex={editIndex}
                 editedUser={editedUser}
-                setEditedUser={setEditedUser}
                 handleEditClick={handleEditClick}
                 handleDelete={handleDelete}
                 handleRoleChange={handleRoleChange}

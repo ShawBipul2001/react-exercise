@@ -1,72 +1,161 @@
 /* styles.css */
+
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 1em;
-    font-family: 'Arial, sans-serif';
-    min-width: 600px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  thead tr {
-    background-color: #3f51b5;
-    color: #ffffff;
-    text-align: left;
-  }
-  
-  th, td {
-    padding: 12px 15px;
-  }
-  
-  tbody tr {
-    border-bottom: 1px solid #dddddd;
-  }
-  
-  tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-  }
-  
-  tbody tr:nth-of-type(odd) {
-    background-color: #ffffff;
-  }
-  
-  tbody tr:last-of-type {
-    border-bottom: 2px solid #3f51b5;
-  }
-  
-  tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
-  }
-  
-  button {
-    background-color: #3f51b5;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 5px;
-  }
-  
-  button:hover {
-    background-color: #007b5e;
-  }
-  
-  input[type="text"],
-  input[type="email"] {
-    width: 100%;
-    padding: 8px;
-    margin: 4px 0;
-    box-sizing: border-box;
-    border: 2px solid #009879;
-    border-radius: 4px;
-  }
-  
-  input[type="text"]:focus,
-  input[type="email"]:focus {
-    border: 2px solid #007b5e;
-    outline: none;
-  }
-  
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1em;
+  /* font-family: 'Arial, sans-serif'; */
+  min-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+  text-align: left;
+}
+
+th, td {
+  padding: 12px 15px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+tbody tr:nth-of-type(odd) {
+  background-color: #ffffff;
+}
+
+tbody tr:last-of-type {
+  border-bottom: 2px solid #3f51b5;
+}
+
+tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+button {
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  border: 2px solid #007b5e;
+  outline: none;
+}
+
+/* Light Theme */
+.app.light thead tr {
+  background-color: #3f51b5;
+  color: #ffffff;
+}
+
+.app.light tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.app.light tbody tr:nth-of-type(odd) {
+  background-color: #ffffff;
+}
+
+.app.light button {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.app.light button:hover {
+  background-color: #007b5e;
+}
+
+.app.light input[type="text"],
+.app.light input[type="email"] {
+  border: 2px solid #009879;
+}
+
+/* Dark Theme */
+.app.dark table {
+  box-shadow: 0 0 20px rgb(9, 237, 28);
+}
+
+.app.dark thead tr {
+  background-color: #222;
+  color: #ffffff;
+}
+
+.app.dark tbody tr:nth-of-type(even) {
+  background-color: #666;
+}
+
+.app.dark tbody tr:nth-of-type(odd) {
+  background-color: #555;
+}
+
+.app.dark button {
+  background-color: #222;
+  color: white;
+}
+
+.app.dark button:hover {
+  background-color: #444;
+}
+
+.app.dark input[type="text"],
+.app.dark input[type="email"] {
+  background-color: #333333;
+  color: #ffffff;
+  border: 2px solid #007b5e;
+}
+
+/* General Styles for select element */
+select {
+  width: 100%;
+  padding: 8px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Theme */
+.app.light select {
+  border: 2px solid #009879;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.app.light select:focus {
+  border-color: #007b5e;
+  outline: none;
+}
+
+/* Dark Theme */
+.app.dark select {
+  border: 2px solid #007b5e;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.app.dark select:focus {
+  border-color: #009879;
+  outline: none;
+}
